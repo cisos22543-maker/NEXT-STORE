@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Store</title>
+    <style>
+        /* Fundo e layout centralizado */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Container da tela inicial */
+        .splash-container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .splash-title {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: popIn 1s ease-in-out;
+        }
+
+        .splash-subtitle {
+            font-size: 22px;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        .splash-button {
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            background-color: #ff6600;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .splash-button:hover {
+            background-color: #ff3300;
+            transform: scale(1.05);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="splash-title">Next Store</div>
+        <div class="splash-subtitle">Sua loja de jogos favorita!</div>
+        <button class="splash-button" onclick="goToStore()">Entrar</button>
+    </div>
+
+    <script>
+        // Redirecionamento automático após 5 segundos
+        setTimeout(goToStore, 5000);
+
+        function goToStore() {
+            window.location.href = "https://nextstoreee.erbshop.space";
+        }
+    </script>
+</body>
+</html>
